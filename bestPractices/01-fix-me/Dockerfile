@@ -8,8 +8,7 @@ RUN apt-get update \
     make \
   && rm -rf /var/lib/apt/lists/*
 
-COPY ./src/Makefile /var/lib/my-app/Makefile
-COPY ./src/*.sh /opt/example/
+COPY src/ /
 
 WORKDIR /var/lib/my-app
 VOLUME [ "/var/log/example" ]
